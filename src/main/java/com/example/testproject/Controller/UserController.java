@@ -3,7 +3,6 @@ package com.example.testproject.Controller;
 import com.example.testproject.Entity.security.User;
 import com.example.testproject.Service.security.SecurityService;
 import com.example.testproject.Service.users.UserService;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -22,7 +21,7 @@ public class UserController {
     }
 
     @PutMapping("current")
-    public User edit( @Valid @RequestBody User user) {
+    public User edit(  @RequestBody User user) {
         long id= SecurityService.getCurrentUserId();
         return userService.edit(id, user);
     }
