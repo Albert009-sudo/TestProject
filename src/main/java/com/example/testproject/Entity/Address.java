@@ -6,7 +6,7 @@ import lombok.*;
 
 @Entity
 @Table(name = "addresses")
-@SequenceGenerator(name = "adressesseq", sequenceName = "ADDRESSES_SEQ", allocationSize = 1)
+@SequenceGenerator(name = "adressesseq", sequenceName = "address_seq", allocationSize = 1)
 @Data
 @Builder
 @NoArgsConstructor

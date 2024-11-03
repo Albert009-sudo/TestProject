@@ -17,12 +17,12 @@ alter table customers
 create unique index customers_id_uindex
     on customers (id);
 
-create sequence "CUSTOMERS_SEQ";
+create sequence "customers_seq";
 
-alter sequence "CUSTOMERS_SEQ" owned by customers.id;
+alter sequence "customers_seq" owned by customers.id;
 
 alter table customers
-    alter column id set default nextval('CUSTOMERS_SEQ'::regclass);
+    alter column id set default nextval('customers_seq'::regclass);
 
 
 
@@ -47,9 +47,9 @@ alter table addresses
 create unique index addresses_id_uindex
     on addresses (id);
 
-create sequence "ADDRESSES_SEQ";
+create sequence "address_seq";
 
-alter sequence "ADDRESSES_SEQ" owned by addresses.id;
+alter sequence "address_seq" owned by addresses.id;
 
 alter table addresses
-    alter column id set default nextval('ADDRESSES_SEQ'::regclass);
+    alter column id set default nextval('address_seq'::regclass);

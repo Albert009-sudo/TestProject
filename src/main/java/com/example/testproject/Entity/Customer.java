@@ -8,7 +8,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "customers")
-@SequenceGenerator(name = "customersSeq", sequenceName = "CUSTOMERS_SEQ", allocationSize = 1)
+@SequenceGenerator(name = "customersSeq", sequenceName = "customers_seq", allocationSize = 1)
 @Data
 @Builder
 @NoArgsConstructor
