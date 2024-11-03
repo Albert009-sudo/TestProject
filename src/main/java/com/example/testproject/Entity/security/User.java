@@ -2,9 +2,7 @@ package com.example.testproject.Entity.security;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
@@ -12,7 +10,8 @@ import java.util.List;
 @Entity
 @Table(name = "users")
 @Builder
-@RequiredArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
     @Id
     @Column(name = "id", nullable = false)
